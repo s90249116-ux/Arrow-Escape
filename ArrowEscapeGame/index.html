@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>Arrow Escape — Extreme</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">↗</span> ARROW<span class="dim">ESCAPE</span></div>
+      <div class="wallet">
+        <span>● <b id="coinCount">60</b></span>
+        <span>★ <b id="starCount">0</b></span>
+      </div>
+    </header>
+
+    <section class="progress">
+      <div class="progress-label"><span>YOUR JOURNEY</span><span id="progressText">0 / 120</span></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+    </section>
+
+    <section class="heading">
+      <div>
+        <p class="eyebrow" id="modeLabel">EXTREME MODE</p>
+        <h1 id="levelTitle">Level 1 <span class="tag">EXTREME</span></h1>
+        <p class="muted" id="subtitle">Plan your escape. Every move matters.</p>
+      </div>
+      <button class="square-btn" id="levelsBtn" aria-label="Choose level">▦</button>
+    </section>
+
+    <section class="board-card">
+      <div class="board-info">
+        <span id="arrowCount">0 arrows left</span>
+        <span id="moveCount">0 moves</span>
+      </div>
+      <div id="board" class="board" aria-label="6 by 6 arrow puzzle"></div>
+      <div class="timer-row">
+        <span>TIME</span><strong id="timer">00:00</strong>
+        <span id="timerMode">STOPWATCH</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="hintBtn" class="control"><span>✧</span><b>Hint</b><small>30 coins</small></button>
+      <button id="undoBtn" class="control"><span>↶</span><b>Undo</b><small>Last move</small></button>
+      <button id="restartBtn" class="control"><span>↻</span><b>Restart</b><small>Try again</small></button>
+    </section>
+
+    <section class="wide-controls">
+      <button id="dailyBtn" class="wide">
+        <span class="wide-icon">✦</span>
+        <span><b>Daily Challenge</b><small id="dailyStatus">New puzzle every day</small></span>
+        <span class="end">→</span>
+      </button>
+      <button id="timeBtn" class="wide">
+        <span class="wide-icon">◷</span>
+        <span><b>Time Attack</b><small>Beat the countdown</small></span>
+        <span class="end">→</span>
+      </button>
+    </section>
+
+    <section class="extras">
+      <button id="achievementsBtn"><span>♜</span><b>Achievements</b><small id="achievementCount">0 unlocked</small></button>
+      <button id="statsBtn"><span>◴</span><b>Statistics</b><small>Personal records</small></button>
+      <button id="shopBtn"><span>◇</span><b>Skin Shop</b><small>Customize arrows</small></button>
+    </section>
+
+    <footer class="settings">
+      <button id="soundBtn">Sound: ON</button>
+      <button id="vibrationBtn">Vibration: ON</button>
+      <span>EXTREME · 6×6</span>
+    </footer>
+    <p class="footer-note">THINK FIRST. MOVE SMART. ESCAPE EVERYTHING.</p>
+  </main>
+
+  <div id="modalBackdrop" class="backdrop hidden">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="close" aria-label="Close">×</button>
+      <div id="modalIcon" class="modal-icon">✦</div>
+      <p id="modalEyebrow" class="eyebrow">ARROW ESCAPE</p>
+      <h2 id="modalTitle">Welcome</h2>
+      <p id="modalText" class="modal-text"></p>
+      <div id="modalExtra" class="modal-extra"></div>
+      <div id="modalActions" class="modal-actions"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
